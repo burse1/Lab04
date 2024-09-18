@@ -10,13 +10,87 @@ void printMenu() {
 	cout << "Your Selection: ";
 }
 void factorial() {
-	// I recommend writing your factorial code here
-}
+	int number;
+	int calculation;
+	cout << "Enter a Number : ";
+		cin >> number;
+		if (number < 0) { 
+			cout << "Nice try, please enter a POSITIVE number...: " << endl;
+			cin >> number;
+		}
+		 if (number >= 0) {
+			int counter = 0;
+			int calculation = 1;
+			cout << number << "! = ";
+			for (counter = 1; counter < number+1; counter++) {
+				cout << counter << " * ";
+				calculation *= counter; 
+		}
+			cout << " = " << calculation << endl;
+			
+		}
+		
+} 
 void arithmetic() {
-	// I recommend writing your arithmetic series code here
-}
+	int number;
+	int first;
+	int add;
+	int series;
+	int i;
+	int calculation = 0;
+	
+	
+
+		cout << "Enter a number to start at: ";
+		cin >> first;
+		
+		cout << endl << "Enter a number to add each time: ";
+		cin >> add; 
+		cout << endl << "Enter the number of elements in the series: ";
+		cin >> series;
+		if (series < 0) {
+			cout << "Nice try, please enter a POSITIVE number...: " << endl;
+			cin >> series;
+		}
+		for (i = 0; i < series; i++) {
+			cout << first << " + ";
+			calculation += first;
+			first += add;
+			
+		}
+		cout << " = " << calculation << endl;
+		
+
+		
+	}
+
+
+
 void geometric() {
-	// I recommend writing your geometric series code here
+	int first;
+	int mult;
+	int series;
+	int i;
+	int calculation = 1;
+	cout << "Enter a number to start at: ";
+	cin >> first;
+	cout << endl << "Enter a number to multiply by each time: ";
+	cin >> mult;
+	cout << endl << "Enter the number of elements in the series: ";
+	cin >> series;
+	if (series < 0) {
+		cout << "Nice try, please enter a POSITIVE number...: " << endl;
+		cin >> series;
+	}
+	for (i = 0; i < series; i++) {
+		cout << first << " + ";
+		calculation += first;
+		first *= mult;
+	}
+	cout << " = " << calculation - 1 << endl;
+
+
+
 }
 int main() {
 	int choice;
